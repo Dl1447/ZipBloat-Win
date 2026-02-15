@@ -37,7 +37,7 @@ jobs:
         copy README.md release\
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ZipBloat-Windows
         path: release/
