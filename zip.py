@@ -689,13 +689,18 @@ if __name__ == "__main__":
     root = tk.Tk()
     
     try:
+        if hasattr(sys, '_MEIPASS'):
+            icon_path = os.path.join(sys._MEIPASS, 'icon.ico')
+        else:
+            icon_path = 'icon.ico'
+        
         if sys.platform == 'win32':
             import ctypes
             myappid = 'geekline.zipbloat.1.0'
             ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
-            root.iconbitmap("icon.ico")
+            root.iconbitmap(icon_path)
         else:
-            root.iconbitmap("icon.ico")
+            root.iconbitmap(icon_path)
     except:
         pass
     

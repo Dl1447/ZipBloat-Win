@@ -29,7 +29,7 @@ jobs:
 
     - name: Build EXE with PyInstaller
       run: |
-        pyinstaller --onefile --windowed --icon=icon.ico --name=ZipBloat zip.py
+        pyinstaller --onefile --windowed --icon=icon.ico --name=ZipBloat --add-data "icon.ico;." zip.py
 
     - name: Create release directory
       run: |
