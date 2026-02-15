@@ -46,11 +46,7 @@ jobs:
 
     - name: Release
       if: github.event_name == 'release'
-      uses: softprops/action-gh-release@v1
-      with:
-        files: |
-          release/ZipBloat.exe
-          release/LICENSE
-          release/README.md
+      run: |
+        gh release upload ${{ github.event.release.tag_name }} release/ZipBloat.exe release/LICENSE release/README.md
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
