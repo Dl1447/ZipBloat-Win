@@ -32,14 +32,14 @@
 
 1. 下载项目文件
 2. 确保系统已安装Python 3.7+
-3. 双击运行 `zip.py` 文件
+3. 双击运行 `ZipBloat.py` 文件
 
 ### 方法2：命令行运行
 
 ```bash
 # 克隆或下载项目后
 cd ZipBloat
-python zip.py
+python ZipBloat.py
 ```
 
 ## 使用指南
@@ -84,7 +84,7 @@ A: 程序会自动检测磁盘空间，不足时会提示是否继续
 
 - **作者**：Geekline
 - **官网**：[geekline.pages.dev](https://geekline.pages.dev)
-- **版本**：1.0
+- **版本**：1.03
 
 ## 贡献
 
